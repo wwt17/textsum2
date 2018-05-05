@@ -4,15 +4,15 @@ train_dataset_hparams = {
     "batch_size": None, # will be set by batcher
     "shuffle": True,
     "source_dataset": {
-        "files": ["./data/train.article.txt"],
-        "vocab_file": "./data/train.article.vocab.txt",
+        "files": ["./data/train.article"],
+        "vocab_file": "./data/vocab",
         "bos_token": "<s>",
         "eos_token": "<\s>",
         "length_filter_mode": "discard",
         "max_seq_length": None # will be set by batcher
     },
     "target_dataset": {
-        "files": ["./data/train.title.txt"],
+        "files": ["./data/train.title"],
         "vocab_share": True,
         "processing_share": True,
         "embedding_init_share": True,
@@ -30,15 +30,15 @@ val_dataset_hparams = {
     "batch_size": None, # will be assigned by batcher
     "shuffle": False,
     "source_dataset": {
-        "files": ["./data/valid.article.filter.txt"],
-        "vocab_file": "./data/train.article.vocab.txt",
+        "files": ["./data/valid_zhou.article"],
+        "vocab_file": "./data/vocab",
         "bos_token": "<s>",
         "eos_token": "<\s>",
         "length_filter_mode": "discard",
         "max_seq_length": None # will be set by batcher
     },
     "target_dataset": {
-        "files": ["./data/valid.title.filter.txt"],
+        "files": ["./data/valid_zhou.title"],
         "vocab_share": True,
         "processing_share": True,
         "embedding_init_share": True,
